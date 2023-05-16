@@ -6,3 +6,14 @@ if [ $# -ne 1 ]; then
 fi
 
 rm /etc/nginx/containers/$1.conf
+nginx -t
+if [ $? -eq 0 ]; then
+    nginx -s reload
+    if [ $? -eq 0 ]; then
+        echo "Page $1 removed successfully"
+    else
+        echo "Failed to reload nginx"
+    fi
+else
+    echo "Failed to remove page $1"
+fi
