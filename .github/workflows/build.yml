@@ -25,6 +25,6 @@ jobs:
         uses: peter-evans/dockerhub-description@v3
         with:
           username: k3y0708
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: k3y0708/hcontainers-router
           readme-filepath: ./ReadMe.md
