@@ -21,3 +21,10 @@ jobs:
         with:
           push: true
           tags: k3y0708/hcontainers-router:${{ github.ref_name }}
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: k3y0708
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: k3y0708/hcontainers-router
+          readme-filepath: ./ReadMe.md
