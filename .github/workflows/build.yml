@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: k3y0708/hcontainers-router:${{ github.ref }}
+          tags: k3y0708/hcontainers-router:${{ github.ref_name }}
